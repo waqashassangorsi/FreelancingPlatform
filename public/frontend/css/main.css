@@ -1429,7 +1429,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	border:0;
 	height: 60px;
 	font-size: 18px;
-	padding: 10px 80px 10px 30px
+	padding: 10px 30px 10px 30px
 }
 .wt-formoptions{
 	top: 0;
@@ -1439,7 +1439,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-dropdown{
 	width: 225px;
 	float: left;
-	border-left: 1px solid #ddd;
+	/* border-left: 1px solid #ddd; */
 }
 .wt-dropdown > span{
 	color: #999;
