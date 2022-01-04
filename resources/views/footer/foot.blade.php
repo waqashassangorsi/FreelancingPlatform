@@ -1,0 +1,17 @@
+	<script src="{{asset('frontend/js/chart.js')}}"></script>
+    <script src="{{asset('frontend/js/vendor/jquery-3.3.1.js')}}"></script>
+	<script src="{{asset('frontend/js/vendor/jquery-library.js')}}"></script>
+	<script src="{{asset('frontend/js/vendor/bootstrap.min.js')}}"></script>
+	<script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
+	<script src="{{asset('frontend/js/chosen.jquery.js')}}"></script>
+	<script src="{{asset('frontend/js/tilt.jquery.js')}}"></script>
+	<script src="{{asset('frontend/js/scrollbar.min.js')}}"></script>
+	<script src="{{asset('frontend/js/prettyPhoto.js')}}"></script>
+	<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
+	<script src="{{asset('frontend/js/readmore.js')}}"></script>
+	<script src="{{asset('frontend/js/countTo.js')}}"></script>
+	<script src="{{asset('frontend/js/appear.js')}}"></script>
+	<script src="{{asset('frontend/js/tipso.js')}}"></script>
+	<script src="{{asset('frontend/js/jRate.js')}}"></script>
+	<script src="{{asset('frontend/js/main.js')}}"></script>
+	<script src = "{{asset('frontend/js/custom.js')}}"> </script>
