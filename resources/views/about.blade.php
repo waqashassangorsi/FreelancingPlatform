@@ -1,4 +1,4 @@
-@include('dashboard.header')
+@include('header')
 <!--Inner Home Banner Start-->
 <div class="wt-haslayout wt-innerbannerholder">
 				<div class="container">

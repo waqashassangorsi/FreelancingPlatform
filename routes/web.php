@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -111,3 +113,6 @@ Route::get('/userlisting', function () {
 Route::get('/usersingle', function () {
     return view('usersingle');
 });
+
+
+Route::post('/registerusers', [UserController::class, 'registerusers']);

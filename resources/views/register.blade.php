@@ -36,7 +36,8 @@
 										</div>
 										<div class="wt-joinforms">
 											
-											<form id="regForm" class="wt-formtheme wt-formregister">
+											<form method = "post" id="regForm" class="wt-formtheme wt-formregister form-group btn-submit">
+												@csrf
                                                 <div id = "sec1"> 
                                                         <ul class="wt-joinsteps">
                                                             <li class="wt-active"><a href="javascrip:void(0);">01</a></li>
@@ -47,13 +48,13 @@
                                                         <fieldset class="wt-registerformgroup">
                                                             <div class="form-group wt-form-group-dropdown form-group-half">
                                                               
-                                                                <input type="text" name="First Name" class="form-control" placeholder="First Name">
+                                                                <input type="text" name="firstname" id = "firstname" class="form-control" placeholder="First Name">
                                                             </div>
                                                             <div class="form-group form-group-half">
-                                                                <input type="text" name="Last Name" class="form-control" placeholder="Last Name">
+                                                                <input type="text" name="lastname" id = "lastname" class="form-control" placeholder="Last Name">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input type="text" name="Email" class="form-control" placeholder="Email">
+                                                                <input type="text" name="email" id = "email" class="form-control" placeholder="Email">
                                                             </div>
                                                             
                                                             <div class="form-group">
@@ -71,104 +72,46 @@
                                                         <fieldset class="wt-registerformgroup">
 													<div class="form-group">
 														<span class="wt-select">
-															<select class="chosen-select locations" data-placeholder="Country" name="locations">
-																<option value="Country">United State</option>
-																<option value="Country1">Canada</option>
-																<option value="Country2">England</option>
-																<option value="Country3">Switzerland</option>
-																<option value="Country4">New Zealand</option>
+															<select class="chosen-select locations form-control" data-placeholder="Country" id = "country" name="country">
+																<option value="United State">United State</option>
+																<option value="Canada">Canada</option>
+																<option value="England">England</option>
+																<option value="Switzerland">Switzerland</option>
+																<option value="New Zealand">New Zealand</option>
+																<option value="Pakistan">Pakistan</option>
 															</select>
 														</span>
 													</div>
 													<div class="form-group form-group-half">
-														<input type="password" name="password" class="form-control" placeholder="Password*">
+														<input type="password" name="password" id = "password" class="form-control" placeholder="Password*">
 													</div>
 													<div class="form-group form-group-half">
-														<input type="password" name="password" class="form-control" placeholder="Retype Password*">
+														<input type="password" name="repassword" id = "repassword" class="form-control" placeholder="Retype Password*">
 													</div>
 												</fieldset>
 												<fieldset class="wt-formregisterstart">
 													<div class="wt-title wt-formtitle"><h4>Start as :</h4></div>
 													<ul class="wt-accordionhold wt-formaccordionhold accordion">
-														<li>
-															<div class="wt-accordiontitle" id="headingOne" data-toggle="collapse" data-target="#collapseOne">
+													<li>
+															<div class="wt-accordiontitle form-group">
 																<span class="wt-radio">
-																	<input id="wt-company" type="radio" name="logged" value="company" checked>
-																	<label for="wt-company">Company<span> (Signup as company/service seeker &amp; post jobs)</span></label>
+																	<input id="wt-buyer" class ="form-control" type="radio" name="accounttype" value="buyer" >
+																	<label for="wt-buyer">Buyer <span>(Signup as Buyer &amp;)</span></label>
 																</span>
-															</div>
-															<div class="wt-accordiondetails collapse show" id="collapseOne" aria-labelledby="headingOne">
-																<div class="wt-radioboxholder">
-																	<div class="wt-title">
-																		<h4>No. of employees you have</h4>
-																	</div>
-																	<span class="wt-radio">
-																		<input id="wt-just" type="radio" name="employees" value="company" checked>
-																		<label for="wt-just">It's just me</label>
-																	</span>
-																	<span class="wt-radio">
-																		<input id="wt-employees" type="radio" name="employees" value="company">
-																		<label for="wt-employees">2 - 9 employees</label>
-																	</span>
-																	<span class="wt-radio">
-																		<input id="wt-employees1" type="radio" name="employees" value="company">
-																		<label for="wt-employees1">10 - 99 employees</label>
-																	</span>
-																	<span class="wt-radio">
-																		<input id="wt-employees2" type="radio" name="employees" value="company">
-																		<label for="wt-employees2">100 - 499 employees</label>
-																	</span>
-																	<span class="wt-radio">
-																		<input id="wt-employees3" type="radio" name="employees" value="company">
-																		<label for="wt-employees3">500 - 1000 employees</label>
-																	</span>
-																	<span class="wt-radio">
-																		<input id="wt-employees4" type="radio" name="employees" value="company">
-																		<label for="wt-employees4">More than 1000 employees</label>
-																	</span>
-																</div>
-																<div class="wt-radioboxholder">
-																	<div class="wt-title">
-																		<h4>Your Department?</h4>
-																	</div>
-																	<span class="wt-radio">
-																		<input id="wt-department" type="radio" name="department" value="department" checked>
-																		<label for="wt-department">Customer Service or Operations</label>
-																	</span>
-																	<span class="wt-radio">
-																		<input id="wt-department1" type="radio" name="department" value="department">
-																		<label for="wt-department1">Finance or Legal</label>
-																	</span>
-																	<span class="wt-radio">
-																		<input id="wt-department2" type="radio" name="department" value="department">
-																		<label for="wt-department2">Engineering or Product Management</label>
-																	</span>
-																	<span class="wt-radio">
-																		<input id="wt-department3" type="radio" name="department" value="department">
-																		<label for="wt-department3">Marketing or Sales</label>
-																	</span>
-																	<span class="wt-radio">
-																		<input id="wt-department4" type="radio" name="department" value="department">
-																		<label for="wt-department4">Human Resources</label>
-																	</span>
-																	<span class="wt-radio">
-																		<input id="wt-department5" type="radio" name="department" value="department">
-																		<label for="wt-department5">Other</label>
-																	</span>
-																</div>
-																<div class="form-group wt-othersearch d-none">
-																	<input type="text" name="fullname" class="form-control" placeholder="Enter Your Department">
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="wt-accordiontitle">
 																<span class="wt-radio">
-																	<input id="wt-freelancer" type="radio" name="logged" value="company">
+																	<input id="wt-freelancer" class = "form-control" type="radio" name="accounttype" value="freelancer">
 																	<label for="wt-freelancer">Freelancer <span>(Signup as freelancer &amp; get hired)</span></label>
 																</span>
 															</div>
 														</li>
+														<!-- <li>
+															<div class="wt-accordiontitle  form-group">
+																<span class="wt-radio">
+																	<input id="wt-freelancer" class = "form-control" type="radio" name="accounttype" value="freelancer">
+																	<label for="wt-freelancer">Freelancer <span>(Signup as freelancer &amp; get hired)</span></label>
+																</span>
+															</div>
+														</li> -->
 													</ul>
 												</fieldset>
 												<fieldset class="wt-termsconditions">
@@ -181,7 +124,7 @@
 															<input id="termsconditions2" type="checkbox" name="termsconditions" value="termsconditions">
 															<label for="termsconditions2"><span>Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse<a href="javascrip:void(0);"> Terms &amp; Conditions</a></span></label>
 														</span>
-														<a href = "#sec3" id = "next3" class="wt-btn">Continue</a>
+														<button  type = "button" name = "submit" id = "next3" class="wt-btn">Continueghgg</button>
 													</div>
 												</fieldset>
                                                 </div>
@@ -209,11 +152,12 @@
                                                             <li class="wt-done-next"><a href="javascrip:void(0);"><i class="fa fa-check"></i></a></li>
                                                             <li class="wt-done-next"><a href="javascrip:void(0);"><i class="fa fa-check"></i></a></li>
                                                         </ul> 
-                                                <div class="wt-gotodashboard">
+                                                <div class="wt-gotodashboard form-group">
                                                     <span>Would you like to add your team?<a href="javascrip:void(0)"> Start Adding Now</a></span>
-                                                    <a href="{{url('/dashboard')}}" class="wt-btn">Goto Dashboard</a>
+                                                    <button class="wt-btn">Goto Dashboard</button>
                                                 </div>
                                                 </div>
+												@csrf
 											</form>
 											<div id = "logwithsocial" class="wt-joinnowholder">
 												<div class="wt-title">
@@ -225,9 +169,9 @@
 												<ul class="wt-socialicons wt-iconwithtext">
 													<li class="wt-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook-f"></i><em>Facebook</em></a>
 													</li>
-													<li class="wt-twitter"><a href="javascript:void(0);"><i class="fab fa-twitter"></i><em>Twitter</em></a></li>
+													<!-- <li class="wt-twitter"><a href="javascript:void(0);"><i class="fab fa-twitter"></i><em>Twitter</em></a></li> -->
 													<li class="wt-googleplus"><a href="javascript:void(0);"><i class="fab fa-google-plus-g"></i><em>Google</em></a></li>
-													<li class="wt-instagram"><a href="javascript:void(0);"><i class="fab fa-instagram"></i><em>Instagram</em></a></li>
+													<!-- <li class="wt-instagram"><a href="javascript:void(0);"><i class="fab fa-instagram"></i><em>Instagram</em></a></li> -->
 												</ul>
 											</div>
 										</div>

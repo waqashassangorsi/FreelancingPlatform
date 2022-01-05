@@ -93,6 +93,8 @@
 	</div>
 	<!--Wrapper End-->
     @include('footer.foot')
+
+	@if(2 < 1)
 	<script>
 		const menu_icon = document.querySelector('.menu-icon');
 		function addClassFunThree() {
@@ -147,5 +149,6 @@
 		    }
 		});
 	</script>
+	@endif
 </body>
 </html>
